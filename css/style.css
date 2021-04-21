@@ -2,6 +2,9 @@
     font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
 }
+body{
+    background: #000;
+}
 .flex-container{
     display: flex;
     align-items: center;
@@ -9,12 +12,16 @@
     justify-content: center;
     background: #333;
     margin: 50px 50px;
+    padding: 20px;
+    border: 8px solid #daa520;
+    outline: 3px solid #f2a510;
 }
 .form{
     min-width: 400px;
     flex: 1;
     text-align: center;
     padding: 30px;
+    order: 5;
 }
 .form__input{
     width: 100%;
@@ -22,15 +29,28 @@
     margin: 6px 0px;
     border: none;
     border-bottom: 5px solid #F2C500;
-    background: #cabb9b;
+    background: transparent;
+    color: #daa520;
+   
+}
+.form__input:focus{
+    background:linear-gradient(to bottom, transparent, #1e2211);
+    outline: none;
+    border-bottom: 5px solid #f2a510;
+    color: #fff;
+   
 }
 .form textarea{
-    min-height: 140px ;
+    min-height: 140px;
+    resize: none;
 }
 .form-img{
     flex: 1;
     display: flex;
     padding: 10px;
+    min-width: 300px;
+    max-width: 400px;
+    order: 2;
 }
 .form-img div{
     padding: 10px;
@@ -41,11 +61,29 @@
 }
 .img-container div{
     background: #F2C500;
-    border-radius: 50%;
+    border-radius: 60%;
     text-align: center;
     padding: 20px;
 }
 .form-img img{
-    width: 86%;
-    object-position: top 10px;  
+    width: 80%;
+    padding-top: 50px;
+}
+.form input[type="submit"]{
+    background: #d3900b;
+    color: #fff;
+    border-bottom: none;
+    padding: 12px;
+}
+.form input[type="submit"]:hover{
+    background: #daa520;
+    color: #fff;
+    border-bottom: none;
+    padding: 12px;
+}
+.form input[type="submit"]:focus{
+    background-color: #f2a510;
+}
+.form input[type="submit"]:active{
+    background:linear-gradient(to bottom, #daa520, #996e0a);
 }
